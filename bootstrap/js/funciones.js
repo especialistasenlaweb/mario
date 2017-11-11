@@ -1,0 +1,16 @@
+$(document).on("ready",function(){
+	$("#miform").on("submit",function(e){
+		e.preventDefault();
+		cadena=$(this).serializeArray();
+		$.ajax({
+			url:"enviar.php",
+			data:cadena,
+			type:"post",
+			beforeSend:function(){
+				$(".mensaje").html("<progress></progress");
+			},
+		}).done(function(resphp){
+			$(".mensaje").html(resphp);
+		});
+	})
+});

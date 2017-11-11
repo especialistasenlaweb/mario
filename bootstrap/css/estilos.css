@@ -1,0 +1,5 @@
+.row [class^=col-]{
+	background:rgba(0,0,255,0.6);
+	border:solid 0.1em;
+	padding:0.5em;
+}
